@@ -1,0 +1,26 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional REPL history
+.node_repl_history
+
+# Optional npm cache directory
+.npm
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# databases files
+*sql
+
+# config file
+config.js
+
+# temporary files
+*~
+#*#
