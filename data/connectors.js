@@ -11,9 +11,9 @@ var password = 'root';
 var port = '8889';
 
 if (env == 'development') {
-  console.log("Env development");
+  console.log("Env development - graphql");
 } else if (env == 'production') {
-  console.log("Env production");
+  console.log("Env production - graphql");
   host = config.host;
   dbName = config.name;
   username = config.username;
@@ -43,8 +43,18 @@ const MovieModel = db.define('movie', {
   freezeTableName: true,
 });
 
+const General_statModel = db.define('general_stat', {
+  newMovies: { type: Sequelize.INTEGER },
+  newTravels: { type: Sequelize.INTEGER },
+}, {
+  timestamps: false,
+  freezeTableName: true,
+});
+
 const Movie = db.models.movie;
+const General_stat = db.models.general_stat;
 
 export { Sequelize,
-  Movie
+  Movie,
+  General_stat
 };

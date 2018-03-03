@@ -20,6 +20,7 @@ yarn-error.log*
 
 # config file
 config.js
+configCrawlers.js
 
 # temporary files
 *~
