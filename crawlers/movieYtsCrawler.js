@@ -3,7 +3,7 @@ var Crawler = require("crawler");
 var async = require("async");
 var mysql = require('mysql');
 
-const config = require('./configCrawlers');
+const config = require('./configCrawlers.js');
 const env = process.env.NODE_ENV || 'development';
 
 var storage = [];
@@ -79,12 +79,18 @@ function removeExistingMovies(callback) {
 }
 
 function insertDatabase(callback) {
+  console.log("-------------");
+  console.log(host);
+  console.log(username);
+  console.log(password);
+  console.log(dbName);
+  console.log(port);
 	const con = mysql.createConnection({
 	  host: host,
 	  user: username,
 	  password: password,
 		database: dbName,
-		port: port
+    port: port
 	});
 
 	con.connect(function(err) {
