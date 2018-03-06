@@ -30,7 +30,7 @@ function crawlerLoop() {
         crawlerLoop();
         return ;
       });
-    }, 3600000);
+    }, 50000);
 }
 crawlerLoop();
 
